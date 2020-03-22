@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
     <img class="brand" src="assets/brand.svg" alt="MP">
   </a>
@@ -9,27 +9,22 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <!-- TODO add project links -->
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Projects
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <div *ngFor="let project of projects;">
+            <a href="{{ project.href }}" target="_blank">{{ project.name }}</a>
+          </div>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" target="_blank" href="assets/resume.pdf">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href=" https://github.com/perlick">GitHub</a>
-      </li>
-      <li class="nav-item">
-        <!-- TODO fix link -->
-        <a class="nav-link" href="#">Contact Information</a>
+        <a class="nav-link" target="_blank" href="https://github.com/perlick">GitHub</a>
       </li>
     </ul>
   </div>
 </nav>
+<div class="spacer"></div>

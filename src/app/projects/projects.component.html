@@ -1,0 +1,11 @@
+<div class="card" style="width: auto;">
+  <div class="card-header">Projects</div>
+  <div class="card-body">
+    <ol>
+      <li *ngFor="let project of projects;">
+        <a href="{{ project.href }}" target="_blank">{{ project.name }}</a>
+      </li>
+    </ol>
+    <a href="https://github.com/perlick" class="btn btn-secondary" target="_blank">GitHub</a>
+  </div>
+</div>
